@@ -1185,6 +1185,93 @@ header {
   z-index: 10;
 }
 
+#modal_scriptinfo {
+  left: 50%;
+  margin: -250px 0 0 -32%;
+  opacity: 0;
+  position: absolute;
+  top: -50%;
+  visibility: hidden;
+  width: 65%;
+  box-shadow: 0 3px 7px rgba(0,0,0,.25);
+  box-sizing: border-box;
+  transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out
+}
+
+#modal_scriptinfo:target {
+  opacity: 1;
+  top: 450px;
+  visibility: visible;
+}
+
+#modal_scriptinfo .header, #modal_scriptinfo .footer {
+  #border-bottom: 1px solid lightgrey;
+  border-radius: 5px 5px 0 0;
+}
+
+#modal_scriptinfo .footer {
+  border: none;
+  border-top: 1px solid lightgrey;
+  border-radius: 0 0 5px 5px
+}
+
+#modal_scriptinfo h1 {
+  #color: black;
+  color: white;
+  margin-top: 0;
+}
+
+#modal_scriptinfo p {
+  #color: black;
+  color: white;
+  font-size: 14px;
+}
+
+#modal_scriptinfo ul {
+  #color: black;
+  color: white;
+  font-size: 14px;
+}
+
+#modal_scriptinfo a {
+  color: white;
+  font-size: 14px;
+}
+
+#modal_scriptinfo a:hover {
+  #color: #4CAF50; /* Green */
+}
+
+#modal_scriptinfo .copy a:hover {
+  color: #4CAF50; /* Green */
+}
+
+#modal_scriptinfo .copy a {
+  color: white;
+  font-size: 15px;
+}
+
+#modal_scriptinfo .btn { float: right }
+
+#modal_scriptinfo .copy, #modal_scriptinfo .header, #modal_scriptinfo .footer {
+  padding: 20px;
+}
+
+#modal_scriptinfo .copy { background: #282828 }
+
+#modal_scriptinfo .overlay {
+  background-color: #000;
+  background: rgba(0,0,0,.8);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
 
 
 @media screen and (max-width: 1000px){
