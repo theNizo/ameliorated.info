@@ -1469,7 +1469,9 @@ header {
   }
 
 	ul.topnav li.right,
-	ul.topnav li {float: none;
+	ul.topnav li {
+    text-align: center;
+    float: none;
     }
 
 	ul.topnav {
@@ -1478,19 +1480,24 @@ header {
 		display: block;
     visibility: hidden;
     opacity: 0;
+    #transition: visibility 0s, right 0.3s;
     transition: visibility 0s, right 0.3s;
+    #transition: visibility 0s, padding 0.3s;
+    #top: -300px;
+    width: 100%;
     right: -100%;
-		width: 30%;
-    min-width: 135px;
+		#width: 30%;
+    #min-width: 135px;
     #overflow: hidden;
     overflow: visible;
     z-index: 10;
     #background-color: #1c1c1c;
-    background-color: #282828;
+    #background-color: #282828;
     #background-color:rgba(61, 57, 57, 0.5);
+    background-color:rgba(61, 57, 57, 0.9);
     top: -14px;
     #padding-top: 45px;
-    float: right;
+    #float: right;
     #border-bottom: 1px solid white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
@@ -1529,7 +1536,12 @@ header {
 	}
 
 	ul.topnav li a {
-		padding: 14px 14px;
+    padding: 14px 14px;
+    margin-left: 0px;
+  }
+  
+  ul.topnav li a.active {
+    border-bottom: 0px solid white;
 	}
 
   ul.topnav li.right {
