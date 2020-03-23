@@ -93,6 +93,67 @@ a:active {
 #############################
 */
 
+#top-small-logo {
+  width: 23px;
+  position: relative;
+  top: 2px;
+  #margin-top:12px;
+  #margin-bottom:-5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  filter: brightness(100%)
+}
+
+#top-small-logo:hover {
+  filter: brightness(50%);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+div.top-small-icons-background {
+  width: 105px;
+  position: relative;
+  top: -5px;
+  float: right;
+  height: 15px;
+  border-radius: 8px;
+  #background-color:rgba(61, 57, 57, 0.5);
+  font-family: courier, "courier new", monospace;
+  color: lightgray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 30px;
+}
+
+#top-small-icons-row {
+  #float: right;
+  position: relative;
+  #right: 207px;
+  #padding-bottom: 60px;
+  overflow: visible;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+#top-small-icons-text {
+  visibility: hidden;
+  display: none;
+  font-size: 8pt;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: -1px;
+  position: relative;
+  #top: -200px;
+}
+
+#top-small-icons-text:hover {
+  opacity: 0.5;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
 
 #top-logo-mobile {
   width: 50px;
@@ -159,13 +220,13 @@ div.nav-wrapper {
 	  text-align: center;
 	  display: table;
 	  margin: 0;
-	  overflow: hidden;
+	  #overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
     width: 100%;
     background-color: #333;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    overflow: hidden;
+    #overflow: hidden;
     position: relative;
 }
 
@@ -177,7 +238,7 @@ ul.topnav {
     margin-top:30px;
     margin-bottom:0;
     padding: 0;
-    overflow: hidden;
+    #overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
 	# background-color: #333;
@@ -222,13 +283,15 @@ ul.topnav li a.active {
 	  border-bottom: 3px solid white;
 	# box-shadow:0px -3px 0px 0px white inset;
 	# box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	  overflow: hidden;
+	  #overflow: hidden;
 	  color: white;
 }
 
 ul.topnav li.right {
 	  float: right;
     opacity: 1.0;
+    bottom: 7px;
+    position: relative;
 }
 
 ul.topnav li.right_active {
@@ -476,7 +539,7 @@ video.autoplay {
 	background-color: #333;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	padding-botton: 0px;
+	padding-bottom: 0px;
 	padding-top: 0px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -725,6 +788,7 @@ p.code:hover {
 }
 
 
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -759,6 +823,41 @@ p.code:hover {
 }
 
 .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.tooltip .top-small-icons-tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 2px;
+  position: absolute;
+  z-index: 1;
+  bottom: -45px;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+.tooltip .top-small-icons-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.tooltip:hover .top-small-icons-tooltiptext {
   visibility: visible;
   opacity: 1;
 }
@@ -1324,10 +1423,18 @@ header {
 
 @media screen and (max-width: 700px){
 
+  div.top-small-icons-background  {
+    visibility: : hidden;
+    display: none;
+  }
+
+  #top-small-icons-row {
+    overflow: hidden;
+  }
+
   div.body {
 		margin-top: 100px;
 	}
-
 
   #top-logo-mobile {
     top: -35px;
@@ -1378,7 +1485,9 @@ header {
     #overflow: hidden;
     overflow: visible;
     z-index: 10;
-    background-color: #1c1c1c;
+    #background-color: #1c1c1c;
+    background-color: #282828;
+    #background-color:rgba(61, 57, 57, 0.5);
     top: -14px;
     #padding-top: 45px;
     float: right;
@@ -1481,7 +1590,7 @@ header {
 	ul.topnav li.right_active {
 	float: none;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background-color: #484848;
+  background-color: #484848;
 	}
 
 	p.download_subtext {
