@@ -10,7 +10,11 @@
 	<meta property="og:url" content="http://ameliorated.info/" />
 	<meta property="og:image" content="http://ameliorated.info/img/ame_logo.jpg" />
 
-
+	<style type="text/css">
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
 
 <style type="text/css">
 
@@ -26,21 +30,33 @@
   background-attachment: fixed;
   background-size:cover">
 
-	<div class="topnav-wrapper">
-		<label for="show-menu" class="show-menu"><img id="mobile-menu-icon" src="img/menu-icon.png"></label>
-		<input type="checkbox" id="show-menu" role="button">
-		<a href="index.html"><img src="img/logo_ame_small.png" id="top-logo-mobile"></a>
-		<ul class="topnav" id="menu">
-		<div id="darken-screen"></div>
-	  <a style="margin: 0px 0px; padding: 0px 0px;" href="index.html"><img class="topnav" src="img/logo_ame_small.png"></li></a>
-    <div class="topnav-reverse">
-      <li><a href="index.html">GET</a></li>
-      <li><a href="documentation.html">DOC</a></li>
-      <li><a class="active" href="faq.html">FAQ</a></li>
-	    <li><a href="https://t.me/joinchat/CR-xFBGQKVt7HPZKgZfbxg" target="_blank">TELEGRAM</a></li>
+<div class="topnav-wrapper">
+    <label for="show-menu" class="show-menu"><img id="mobile-menu-icon" src="img/menu-icon.png"></label>
+    <input type="checkbox" id="show-menu" role="button">
+    <a href="index.html"><img src="img/logo_ame_small.png" id="top-logo-mobile"></a>
+    <ul class="topnav" id="menu">
+    <div id="darken-screen"></div>
+    <a href="index.html"><img class="topnav" src="img/logo_ame_small.png"></li></a>
+    <div id="top-small-icons-row">
+        <div class="top-small-icons-background">
+        <li class="right"><a style="padding: 0px 0px; margin-left: 0px; cursor: pointer;" href="https://git.ameliorated.info/malte/scripts" target="_blank">
+                <div class="tooltip"><img src="img/git-logo-white.png" id="top-small-logo"><span id="top-small-icons-text" >[ Gitea ]</span><span class="top-small-icons-tooltiptext" style="position: relaitve; left: 15px;">Gitea</span></div>
+            </a></li>
+        <li class="right"><a style="padding: 0px 0px; margin-left: 0px; cursor: pointer;" href="https://wiki.ameliorated.info" target="_blank">
+                <div class="tooltip"><img src="img/book_wiki.png" id="top-small-logo"><span id="top-small-icons-text">[ Dokuwiki ]</span><span class="top-small-icons-tooltiptext" style="position: relaitve; left: 15px;">Dokuwiki</span></div>
+            </a></li>
+        <li class="right"><a style="padding: 0px 0px; margin-left: 0px; cursor: pointer;" href="https://t.me/joinchat/CR-xFBGQKVt7HPZKgZfbxg" target="_blank">
+                <div class="tooltip"><img src="img/telegram.png" id="top-small-logo"><span id="top-small-icons-text">[ Telegram ]</span><span class="top-small-icons-tooltiptext">Telegram</span></div>
+            </a></li>
+        </div>
     </div>
-	</ul>
-	</div>
+    <div class="topnav-reverse">
+        <li><a href="index.html">GET</a></li>
+        <li><a href="documentation.html">DOC</a></li>
+        <li><a class="active" href="faq.html">FAQ</a></li>
+    </div>
+</ul>
+</div>
 
 
 <div class="body">
@@ -58,7 +74,7 @@
         </li>
         <li>
             <a href="#configure">Configuring AME For Stable And Secure Operation</a>
-        <ol type="a">
+        <ol type="1">
             <li>
                 <a href="#windows_update">Windows Update And Security Concerns</a>
             </li>
@@ -66,7 +82,7 @@
                 <a href="#method">The Case For Our Method</a>
             </li>
         </ol>
-        </li>
+    </li>
         <li>
             <a href="#sshd">How do I enable the built-in SSH/SFTP server?</a>
         </li>
@@ -93,8 +109,7 @@
         </li>
         <li>
             <a href="#privacy">Privacy or Security?</a>
-        </li>
-        <ol>
+        <ol type="1">
             <li>
                 <a href="#windows_update">Windows Updates</a>
             </li>
@@ -102,18 +117,19 @@
                 <a href="#opensource">Open Source</a>
             </li>
         </ol>
+    </li>
         <li>
             <a href="#script_host">How do I enable Windows Script Host access?</a>
         </li>
         <li>
             <a href="#add_admin">How to add my user back to the Administrator group?</a>
         </li>
+        <li>
+            <a href="#why_not_lts">Why don't we base AME on LTS(B,C) releases?</a>
+        </li>
 </ol>
 
 
-<ol>
-
-</ol>
 
 
 <br>
@@ -334,6 +350,12 @@ We by all means strongly encourage users unfamiliar with these concepts to explo
 <p>After this, restart Windows, and the default user will have administrator privileges.</p>
 <br>
 
+
+<h2 id="why_not_lts">Why don't we base AME on LTS(B,C) releases?</h2>
+<p>Windows 10 LTS releases, such as LTSB, which is based on build 1511, or LTSC, which is based on build 1809, have limited longevity with respect to hardware and driver support. This makes sense, given that the entire goal of the LTS Windows releases is to not change for multiple years. If we based AME on an LTS release, we would essentially only have one release, and then nothing for years on end. By basing AME on the Windows 10 Pro mainline releases, we have the ability to quickly respond, if software or driver incompatibilities emerge, due to the obsolescence of any specific build, as mainline releases are published about every six months by Microsoft.</p>
+<div class="source_white"><a class="source_white" href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/ltsc-what-is-it-and-when-should-it-be-used/ba-p/293181" target="_blank">[ SOURCE &mdash; techcommunity.microsoft.net ]</a></div>
+<br>
+<br>
 
 
 </div>
