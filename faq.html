@@ -237,6 +237,28 @@ It&#8217;s important to remark, that due to Windows 10&#8217;s update mechanics,
 </pre></div></div>
 <br>
 
+<h3>I'm using a different layout (Dvorak, Colemak, Workman, etc...)</h3>
+
+<p>(This works with custom layouts too.)</p>
+
+<p>For the first command, use a virtual machine or another PC with a normal Windows 10 installation and set the keyboard layout that you want as default.</p>
+
+<p>Then open <span class="code">powershell</span> and type the following:</p>
+
+<div class="comment-code"><div style=" overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span class="unselectable">C:\> </span><span style="color: #5ec5d7"></span>Get-WinDefaultInputMethodOverride<span style="color: #a4df2d"></span>
+</pre></div></div>
+
+<p>This gives you back a number. On your AME machine, type in <span class="code">powershell</span> (replacing [Number] with the number you just got):</p>
+
+<div class="comment-code"><div style=" overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span class="unselectable">C:\> </span><span style="color: #5ec5d7"></span>Set-WinDefaultInputMethodOverride [Number]<span style="color: #a4df2d"></span>
+</pre></div></div>
+
+<p>This adds the layout to your list.</p>
+
+<p>Then go into <span class="code">Settings -> Devices -> Typing -> Advanced Keyboard Settings</span> and set the default layout to the one you want.</p>
+
+<p>If you want to use the layout on the login screen, go to <span class="code">Control Panel -> Region -> Administrative -> Copy Settings</span>, tick "Welcome screen and system accounts" and press "Ok".
+
 <h2 id="dark_theme">How do I enable the dark theme?</h2>
 <p>The vanilla dark theme, while available, is not recommended, as it is extremely early in development. You can install a custom dark theme, however this appears to introduce a 15 second hang when logging in for some reason.</p>
 <br>
